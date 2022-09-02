@@ -105,10 +105,10 @@
                   var phone = response['data'][i].phone;
                   var email = response['data'][i].email;
                   var password = response['data'][i].password;
-                  // var subject = response['data'][i].subject;
+                  // var sname = response['data'][i].sname;
                   
                   
-                  dataox+="<tr><th scope=\"col\">"+srno+"</th><th scope=\"col\">"+fname+"</th><th scope=\"col\">"+mname+"</th><th scope=\"col\">"+lname+"</th><th scope=\"col\">"+gender+"</th><th scope=\"col\">"+phone+"</th><th scope=\"col\">"+email+"</th><th scope=\"col\">"+password+"</th><th scope=\"col\"></th><th scope=\"col\"> <a href=\"editstudent?stuid="+stuid+"\"\"><button type=\"button\" class=\"btn btn-primary form-control\">Edit</button></a></th><th scope=\"col\"> <a href=\"deletestudent?stuid="+stuid+"\"\" ><button type=\"button\" class=\"btn btn-danger form-control\" >Delete</button></a> </th></tr></thead>";
+                  dataox+="<tr><th scope=\"col\">"+srno+"</th><th scope=\"col\">"+fname+"</th><th scope=\"col\">"+mname+"</th><th scope=\"col\">"+lname+"</th><th scope=\"col\">"+gender+"</th><th scope=\"col\">"+phone+"</th><th scope=\"col\">"+email+"</th><th scope=\"col\">"+password+"</th><th scope=\"col\"></th><th scope=\"col\"> <a href=\"edit?stuid="+stuid+"\"\"><button type=\"button\" class=\"btn btn-primary form-control\">Edit</button></a></th><th scope=\"col\"> <a href=\"deletestudent?stuid="+stuid+"\"\" ><button type=\"button\" class=\"btn btn-danger form-control\" >Delete</button></a> </th></tr></thead>";
                   // dataox+="<tbody>";
                    
                   

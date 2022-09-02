@@ -31,8 +31,8 @@ Route::get('/user',function(){
     return view('user');
 });
 
-Route::get('/chosen',function(){
-    return view('chosen');
+Route::get('/edit',function(){
+    return view('edit');
 });
 
 Route::post('/login',[UserController::class,'userLogin']);
@@ -42,6 +42,8 @@ Route::get('/userinfo',[UserController::class,'userInfo']);
 Route::get('/fetchstudent',[UserController::class,'fetchStudent']);
 
 Route::get('/fetchsub',[UserController::class,'fetchSub']);
+
+Route::get('/edit',[UserController::class,'editStudent']);
 
 Route::get('/deletestudent',[UserController::class,'deleteStudent']);
 

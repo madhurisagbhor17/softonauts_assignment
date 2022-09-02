@@ -32,45 +32,45 @@
 
     <div class="mx-auto pt-4 " style="width: 600px;">
 
-        <form method="POST" id="addform" enctype="multipart/form-data">
+        <form method="" id="" enctype="multipart/form-data">
             
                  @csrf
                     <div class="form-group ">
                         <label for="">First Name</label>
-                        <input type="text" class="form-control" id="fname" name="fname" placeholder="" >
+                        <input type="text" class="form-control" id="fname" name="fname" placeholder=""  value="{{ $fname }}">
                     </div>
     
                     <div class="form-group ">
                         <label for="">Middle Name</label>
-                        <input type="text" class="form-control" id="mname" name="mname" placeholder="" >
+                        <input type="text" class="form-control" id="mname" name="mname" placeholder="" value="{{ $mname }}">
                     </div>
                     <div class="form-group ">
                         <label for="">Last Name </label>
-                        <input type="text" class="form-control" id="lname" name="lname" placeholder="" >
+                        <input type="text" class="form-control" id="lname" name="lname" placeholder="" value="{{ $lname }}">
                     </div>
                  
                     <div class="form-group ">
                         <label for="">gender</label>
-                        <input type="text" class="form-control" id="gender" name="gender" placeholder="" >
+                        <input type="text" class="form-control" id="gender" name="gender" placeholder="" value="{{ $gender }}">
                     </div>
                     <div class="form-group ">
                         <label for="">Phone</label>
-                        <input type="text" class="form-control" id="phone" name="phone" placeholder="" >
+                        <input type="text" class="form-control" id="phone" name="phone" placeholder="" value="{{ $phone }}">
                     </div>
                 
                     <div class="form-group ">
                         <label for="">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="" >
+                        <input type="email" class="form-control" id="email" name="email" placeholder="" value="{{ $email }}">
                     </div>
     
                     <div class="form-group ">
                         <label for="">password</label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="" >
+                        <input type="password" class="form-control" id="password" name="password" placeholder="" value="{{ $password }}">
                     </div>
     
                     <div class="form-group ">
                         <label for="">Course</label>
-                        <select id="subject" name="subject[]"  data-placeholder="Choose a course..." multiple class="form-control chosen-select" >
+                        <select id="subject" name="subject"  data-placeholder="Choose a course..." multiple class="form-control chosen-select" value="{{ $subject ?? ''}}">
                             
                         </select>
                     </div>
@@ -82,10 +82,7 @@
                         
                     </div>
     
-                    <div class="form-group">
-                        <a href="/"><button type="button"  class="form-control btn btn-success ">Login</button></a>
-                        
-                    </div>
+                   
                     
         </form>
     </div>
