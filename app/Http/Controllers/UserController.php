@@ -49,7 +49,7 @@ class UserController extends Controller
         $email = $edit[0]->email;
         $password = $edit[0]->password;
         // $subject = $edit[0]->subject;
-
+        
         // echo $fname;
         return view('edit',compact('fname','mname','lname','gender','phone','email','password'));
     } 
@@ -112,40 +112,48 @@ class UserController extends Controller
 
     public function fetchStudent(Request $request)
     {
-        // imp
-        $value = Session::get('username');
-        $userinfo = DB::select("SELECT * FROM studenttbl WHERE email = ? OR phone = ?",[$value,$value]);
-        $id = $userinfo[0]->stuid;
-        // echo $id;
-        $fetchstudent['data'] = DB::select("SELECT * FROM studenttbl WHERE stuid=?",[$id]);
-
-        // $submap = DB::select("select subid from subusermaptbl where stuid = ?",[$id]);
-        // $hey = $submap[0]->sname;
-        // return $submap;
-        // var_dump($submap);
        
-        
-        
+        $fetchallstudent['data'] = DB::select("SELECT * FROM studenttbl");
+        return $fetchallstudent;
+
+        // $value = Session::get('username');
+        // $userinfo = DB::select("SELECT * FROM studenttbl WHERE email = ? OR phone = ?",[$value,$value]);
+        // $id = $userinfo[0]->stuid;
+        // $fetchstudent['data'] = DB::select("SELECT * FROM studenttbl WHERE stuid=?",[$id]);
         // return $fetchstudent;
 
-        // $subject =DB::select("select * from subjecttbl where subid=?",[var_dump($submap)]);
-        // return $subject;
-        // imp
+
+        $subject = DB::select("select subid from subusermaptbl");
+        
+        $string = '';
+
+        foreach($subject as $a)
+        {    
+            foreach($a as $b)
+            {
+                $string .= $b.',';
+            }
+        }
+        
+        print_r($string);
+
+        
+
+        
+
+
+
         
         
-        // $fetchstudent = DB::select("SELECT fname,mname,lname,gender,phone,email,password,sname FROM studenttbl as s
-        // INNER JOIN subusermaptbl as sum 
-        // ON s.stuid = sum.stuid
-        // INNER JOIN subjecttbl as sub 
-        // on sub.subid = sum.subid",[$id]);
+
+        
+
+
+    
 
 
 
 
-        // return $user;
-
-       
-        return $fetchstudent;
     } 
 
    

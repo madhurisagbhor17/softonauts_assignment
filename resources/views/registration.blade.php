@@ -129,7 +129,7 @@ $(document).ready(function (){
                 error:function(e) {
                     console.log("ERROR :",e);
                     $('#addbtn').prop("disable", false);
-                    alert(e.responseText);
+                    // alert(e.responseText);
                 }
             });
 
