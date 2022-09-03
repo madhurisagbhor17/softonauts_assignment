@@ -113,16 +113,18 @@ class UserController extends Controller
     public function fetchStudent(Request $request)
     {
        
-        $fetchallstudent['data'] = DB::select("SELECT * FROM studenttbl");
-        return $fetchallstudent;
-
+        // single student data fetch
         // $value = Session::get('username');
         // $userinfo = DB::select("SELECT * FROM studenttbl WHERE email = ? OR phone = ?",[$value,$value]);
         // $id = $userinfo[0]->stuid;
         // $fetchstudent['data'] = DB::select("SELECT * FROM studenttbl WHERE stuid=?",[$id]);
         // return $fetchstudent;
 
+        $fetchallstudent['data'] = DB::select("SELECT * FROM studenttbl");
+        return $fetchallstudent;
 
+
+        // subject array
         $subject = DB::select("select subid from subusermaptbl");
         
         $string = '';
@@ -136,22 +138,6 @@ class UserController extends Controller
         }
         
         print_r($string);
-
-        
-
-        
-
-
-
-        
-        
-
-        
-
-
-    
-
-
 
 
     } 
